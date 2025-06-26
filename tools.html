@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ACP | Tools & Techniques</title>
+
+  <!-- Futuristic Monospace & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-pzw1KcK6wvUq4/9+0Rv9p10XnZtSsmL5ZoofF4gKibpYQshKUK+egN4j/7Q1GcKZFhpg8CLDkNQ7oFP5KfYlfA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="icon" href="assets/favicon.ico"/>
+  <script src="assets/js/scroll.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="tools-page">
+  <!-- Matrix‐style rain canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="assets/Logo.png" alt="ACP Logo"></div>
+    <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="tools.html">Tools</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="labs.html">Labs</a></li>
+      <li><a href="ctf.html">CTFs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CSS‐only Grid Background -->
+  <div class="background-grid"></div>
+
+  <main>
+    <h1 class="page-title glitch" data-text="Recon Arsenal">Recon Arsenal</h1>
+    <p class="subtitle">Offensive tools across reconnaissance, exploitation & post-exploitation.</p>
+
+    <div class="tools-grid" id="tools-grid">
+      <!-- MalWatch -->
+      <div class="tool-card">
+        <div class="card-header">
+          <i class="fas fa-bug tool-icon"></i>
+          <h2>MalWatch</h2>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="tool-desc">Real-time malware behavior monitoring & alerting.</p>
+          <ul class="features">
+            <li>Live process tracing</li>
+            <li>YARA-based detection</li>
+            <li>Automated quarantine</li>
+          </ul>
+          <button class="btn action-btn">💾 Run Demo</button>
+        </div>
+      </div>
+
+      <!-- WebRecon -->
+      <div class="tool-card">
+        <div class="card-header">
+          <i class="fas fa-globe tool-icon"></i>
+          <h2>WebRecon</h2>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="tool-desc">Automated website footprinting & subdomain enumeration.</p>
+          <ul class="features">
+            <li>DNS & SSL scans</li>
+            <li>JS parsing</li>
+            <li>Sitemap analysis</li>
+          </ul>
+          <button class="btn action-btn">📜 View Script</button>
+        </div>
+      </div>
+
+      <!-- SSH-Brute -->
+      <div class="tool-card">
+        <div class="card-header">
+          <i class="fas fa-terminal tool-icon"></i>
+          <h2>SSH-Brute</h2>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="tool-desc">High-speed SSH credential testing with custom wordlists.</p>
+          <ul class="features">
+            <li>Multi-threaded</li>
+            <li>Key-based auth</li>
+            <li>Lockout bypass</li>
+          </ul>
+          <button class="btn action-btn">💾 Run Demo</button>
+        </div>
+      </div>
+
+      <!-- NetWatch -->
+      <div class="tool-card">
+        <div class="card-header">
+          <i class="fas fa-network-wired tool-icon"></i>
+          <h2>NetWatch</h2>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="tool-desc">Interactive network mapping with live packet capture.</p>
+          <ul class="features">
+            <li>Auto-map subnets</li>
+            <li>Live traffic graph</li>
+            <li>Protocol filters</li>
+          </ul>
+          <button class="btn action-btn">📜 View Script</button>
+        </div>
+      </div>
+
+      <!-- LogSniff -->
+      <div class="tool-card">
+        <div class="card-header">
+          <i class="fas fa-search tool-icon"></i>
+          <h2>LogSniff</h2>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="tool-desc">Real-time log aggregation & anomaly detection.</p>
+          <ul class="features">
+            <li>Pattern matching</li>
+            <li>Alert triggers</li>
+            <li>Encrypted storage</li>
+          </ul>
+          <button class="btn action-btn">💾 Run Demo</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
