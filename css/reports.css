@@ -1,10 +1,135 @@
-.reports-grid,
-.labs-grid,
-.ctf-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+/* --- Page Title & Subtitle (shared with Tools) --- */
+.page-title {
+  font-family: 'Orbitron', monospace;
+  text-align: center;
+  color: var(--accent-neon);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 2rem 0 0.5rem;
+}
+.subtitle {
+  text-align: center;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-/* Reports- or Labs- or CTF- specific overrides can go here */
+/* --- Main wrapper: center & match Tools page --- */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  box-sizing: border-box;
+}
+
+/* --- Carousel Wrapper & Gap Below --- */
+.carousel-wrapper {
+  position: relative;
+  overflow: visible;       /* arrows sit outside container */
+  padding: 0 2rem;         /* breathing room at page edges */
+  margin-bottom: 2rem;     /* gap under carousel */
+}
+.carousel-container {
+  overflow: hidden;        /* hide overflow as track moves */
+}
+
+/* --- Carousel Track & Slides --- */
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;             /* wider gutters */
+  padding: 0 1rem;         /* small inset for first/last items */
+  transition: transform 0.5s ease;
+  will-change: transform;
+  justify-content: center; /* keep track centered under title */
+}
+
+/* --- Individual Slide Cards --- */
+.carousel-item {
+  flex: 0 0 220px;
+  background: var(--glass-bg);
+  border: 1px solid var(--accent-neon);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  padding-bottom: 1.5rem;
+  transform-origin: center bottom; /* scale from bottom center */
+}
+
+/* --- Active (center) Slide --- */
+.carousel-item.active {
+  opacity: 1;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.6);
+  z-index: 2;
+}
+
+/* --- PDF Preview & Title --- */
+.carousel-item embed {
+  width: 100%;
+  height: 280px;
+  border-bottom: 1px solid var(--accent-neon);
+}
+.carousel-item h3 {
+  margin: 0.75rem;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  color: var(--accent-neon);
+}
+
+/* --- Navigation Arrows --- */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: var(--accent-neon);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 3;
+}
+.carousel-nav.prev { left: 0; }
+.carousel-nav.next { right: 0; }
+.carousel-nav:hover {
+  background: var(--accent-pink);
+  color: #111;
+}
+
+/* --- Inline Detail Pane --- */
+.carousel-detail {
+  background: var(--page-bg);
+  border: 1px solid var(--accent-neon);
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  max-width: 900px;
+  position: relative;
+  box-sizing: border-box;
+}
+.carousel-detail h4 {
+  font-family: 'Orbitron', monospace;
+  color: var(--accent-neon);
+  margin: 0 0 0.5rem;
+}
+.carousel-detail p {
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+.carousel-detail embed {
+  width: 100%;
+  height: 60vh;
+  border: 1px solid var(--accent-neon);
+  border-radius: 4px;
+}
+.carousel-detail .detail-close {
+  position: absolute;
+  top: 0.5rem; right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent-neon);
+  cursor: pointer;
+}

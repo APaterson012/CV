@@ -184,5 +184,7 @@ img {
 .subtitle {
   text-align: center;
   color: #77ffe8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
+

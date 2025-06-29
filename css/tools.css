@@ -7,14 +7,6 @@
   margin: 2rem 0 0.5rem;
 }
 
-/* Subtitle */
-.tools-page .subtitle {
-  text-align: center;
-  color: #77ffe8;
-  margin-bottom: 2rem;
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-}
-
 /* Tools Grid Container */
 .tools-grid {
   display: grid;

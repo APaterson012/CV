@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>ACP | Vulnerability Reports</title>
+
+  <!-- Global & Page Styles -->
   <link rel="stylesheet" href="css/global.css"/>
   <link rel="stylesheet" href="css/reports.css"/>
-  <link rel="icon" href="assets/favicon.ico"/>
+
+  <!-- Core scripts (matrix rain, nav toggle) -->
   <script src="js/main.js" defer></script>
+  <!-- Carousel logic -->
+  <script src="js/reports.js" defer></script>
 </head>
-<body>
+<body class="reports-page">
   <nav class="navbar">
-    <div class="logo"><img src="assets/Logo.png" alt="ACP Logo"></div>
+    <div class="logo"><img src="assets/logo.png" alt="ACP Logo"/></div>
     <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
     <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -23,10 +28,28 @@
     </ul>
   </nav>
 
-  <main class="reports-page">
-    <h2>Vulnerability Reports</h2>
-    <p class="subtitle">Expand each report for summary, CVSS, exploit path, impact & remediation.</p>
-    <div class="reports-grid" id="reports-container"></div>
+  <canvas id="matrix-canvas"></canvas>
+
+  <main>
+    <section class="reports-carousel">
+      <h1 class="page-title glitch" data-text="Vulnerability Reports">
+        Vulnerability Reports
+      </h1>
+      <p class="subtitle">Swipe or click through your unlocked write-ups.</p>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-nav prev" aria-label="Previous">‹</button>
+        <div class="carousel-container">
+          <div class="carousel-track" id="carousel-track">
+            <!-- slides will be injected here -->
+          </div>
+        </div>
+        <button class="carousel-nav next" aria-label="Next">›</button>
+      </div>
+
+      <!-- Detail pane (injected via JS) -->
+      <div id="detail-container"></div>
+    </section>
   </main>
 </body>
 </html>
