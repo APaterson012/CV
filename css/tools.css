@@ -1,0 +1,217 @@
+/* Page Title */
+.page-title {
+  font-family: 'Orbitron', monospace;
+  text-align: center;
+  color: var(--accent-neon);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 2rem 0 0.5rem;
+}
+
+/* Subtitle */
+.tools-page .subtitle {
+  text-align: center;
+  color: #77ffe8;
+  margin-bottom: 2rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+/* Tools Grid Container */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 2rem;
+  padding: 0 2rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tool Card Base & Reveal */
+.tool-card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--accent-neon);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+.tool-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px var(--accent-neon);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--accent-neon);
+}
+.card-header h2 {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-family: 'Orbitron', monospace;
+}
+.tool-icon {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+}
+/* Star twinkle */
+@keyframes twinkle { 0%,100%{opacity:1}50%{opacity:0.4} }
+.stars i {
+  color: var(--accent-pink);
+  margin-left: 0.2rem;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* Card Body */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: clamp(1.1rem, 3vw, 1.2rem);
+  line-height: 1.4;
+}
+.features {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}
+.features li {
+  font-size: inherit;
+  margin-bottom: 0.3rem;
+}
+
+
+/* Run & Guide Buttons Container */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.actions > button {
+  flex: 1;
+  margin-top: auto;
+  justify-content: center;
+}
+
+/* Button Styles */
+.run-btn,
+.readme-btn,
+.info-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.run-btn {
+  background: var(--accent-neon);
+  color: #111;
+  border: none;
+}
+.run-btn:hover {
+  background: var(--accent-pink);
+  color: #fff;
+}
+.readme-btn,
+.info-btn {
+  background: var(--glass-bg);
+  color: var(--accent-neon);
+  border: 1px solid var(--accent-neon);
+}
+.readme-btn:hover,
+.info-btn:hover {
+  background: var(--accent-neon);
+  color: #111;
+}
+.run-btn i,
+.readme-btn i,
+.info-btn i {
+  font-size: 1.2rem;
+  color: inherit;
+  margin-right: 0.5rem;
+}
+
+/* Modal overlay */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide it when “hidden” */
+.modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The white “card” inside the overlay */
+.modal-content {
+  position: relative;
+  background: var(--page-bg);
+  border: 1px solid var(--accent-neon);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 0 20px var(--accent-neon);
+  color: var(--text-main);
+  overflow-y: auto;
+  max-height: 85vh;
+}
+
+/* Close “X” button */
+.modal-close {
+  position: absolute;
+  top: 0.5rem; right: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--accent-neon);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Inside the modal: headings and lists */
+#modal-body h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--accent-pink);
+}
+#modal-body h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.3rem;
+  color: var(--accent-neon);
+}
+#modal-body ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+#modal-body pre {
+  background: rgba(255,255,255,0.05);
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  overflow-x: auto;
+}
+

@@ -1,0 +1,10 @@
+.reports-grid,
+.labs-grid,
+.ctf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Reports- or Labs- or CTF- specific overrides can go here */

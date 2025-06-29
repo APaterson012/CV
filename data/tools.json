@@ -1,0 +1,67 @@
+[
+  {
+    "name": "MalWatch",
+    "desc": "Advanced malware scanning with hash & YARA detection.",
+    "stars": 3,
+    "features": [
+      "SHA256/MD5 hashing",
+      "YARA rule matching",
+      "Process termination & JSON logging"
+    ],
+    "scriptUrl": "assets/scripts/malwatch.py",
+    "readmeUrl": "assets/readmes/malwatch.md",
+    "command": "python3 malwatch.py -p /home -m malware_hashes.txt -y rules.yar --kill --json"
+  },
+  {
+    "name": "WebRecon",
+    "desc": "Web footprinting: subdomain brute-force & directory fuzzing.",
+    "stars": 2,
+    "features": [
+      "Subdomain enumeration",
+      "Path fuzzing",
+      "Passive DNS lookups & JSON output"
+    ],
+    "scriptUrl": "assets/scripts/webrecon.py",
+    "readmeUrl": "assets/readmes/webrecon.md",
+    "command": "python3 webrecon.py example.com -s subs.txt -d paths.txt -o recon.json"
+  },
+  {
+    "name": "SSH-Brute",
+    "desc": "SSH credential brute-forcing with resumable, interactive shell.",
+    "stars": 4,
+    "features": [
+      "Multi-user & wordlist support",
+      "Interactive post-exploit shell",
+      "JSON logging & lockout handling"
+    ],
+    "scriptUrl": "assets/scripts/ssh-brute.py",
+    "readmeUrl": "assets/readmes/ssh-brute.md",
+    "command": "python3 ssh-brute.py 10.10.10.10 -U users.txt -w rockyou.txt -i -o creds.json"
+  },
+  {
+    "name": "NetWatch",
+    "desc": "Real-time connection monitor with GeoIP & stealth logging.",
+    "stars": 2,
+    "features": [
+      "Custom blacklist & GeoIP lookup",
+      "Process-level metadata",
+      "Silent JSON logging"
+    ],
+    "scriptUrl": "assets/scripts/netwatch.py",
+    "readmeUrl": "assets/readmes/netwatch.md",
+    "command": "python3 netwatch.py -b blacklist.txt -g -l netlog.json -s"
+  },
+  {
+    "name": "LogSniff",
+    "desc": "Log analysis for intrusion patterns with live-tail support.",
+    "stars": 1,
+    "features": [
+      "Built-in & custom regex rule sets",
+      "Live “tail” monitoring",
+      "JSON alert output"
+    ],
+    "scriptUrl": "assets/scripts/logsniff.py",
+    "readmeUrl": "assets/readmes/logsniff.md",
+    "command": "python3 logsniff.py -f /var/log/syslog -r rules.regex -o alerts.json -t"
+  }
+]
