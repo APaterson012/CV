@@ -9,6 +9,10 @@
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
+/* import the Orbitron webfont for all pages */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
 /* Base Reset & Fluid Typography */
 * {
   margin: 0;
@@ -93,6 +97,7 @@ body {
 
 /* Glitch Text */
 .glitch {
+  font-family: 'Orbitron', monospace;
   position: relative;
   color: var(--accent-neon);
 }

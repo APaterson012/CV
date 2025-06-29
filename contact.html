@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="css/global.css"/>
   <link rel="stylesheet" href="css/contact.css"/>
   <link rel="icon" href="assets/favicon.ico"/>
+  <!-- GSAP for any animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <!-- Your main.js includes initMatrixRainCanvas() -->
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <!-- Matrix Rain Background -->
+  <canvas id="matrix-canvas"></canvas>
+
   <nav class="navbar">
     <div class="logo"><img src="assets/Logo.png" alt="ACP Logo"/></div>
     <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
@@ -24,9 +29,6 @@
     </ul>
   </nav>
 
-  <!-- Binary Rain Overlay -->
-  <div class="binary-rain"></div>
-
   <main class="contact-page">
     <div class="contact-container glass">
       <!-- Glitch Heading -->
@@ -37,8 +39,9 @@
       <form id="contact-form" action="https://formspree.io/f/mzzgkqpo" method="POST">
         <div class="input-group">
           <label for="name">
-            <!-- Simple SVG icon -->
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#00ffe1"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#00ffe1">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
             Name
           </label>
           <input id="name" name="name" type="text" placeholder="GhostShell" required/>
@@ -46,7 +49,9 @@
 
         <div class="input-group">
           <label for="email">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#00ffe1"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#00ffe1">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
             Email
           </label>
           <input id="email" name="email" type="email" placeholder="agent@ops.tld" required/>
@@ -54,7 +59,9 @@
 
         <div class="input-group">
           <label for="message">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#00ffe1"><path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#00ffe1">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
             Message
           </label>
           <textarea id="message" name="message" rows="5" placeholder="Dispatch intel..." required></textarea>
@@ -68,7 +75,7 @@
       <div class="social-icons">
         <a href="https://github.com/APaterson012" target="_blank">GitHub</a>
         <a href="https://www.hackthebox.com/profile/153626" target="_blank">Hack The Box</a>
-        <a href="mailto:apaterson012@gmail.com">email</a>
+        <a href="mailto:apaterson012@gmail.com">Email</a>
       </div>
     </div>
   </main>
