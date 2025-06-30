@@ -5,19 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>ACP | Vulnerability Reports</title>
 
-  <!-- Global & Page Styles -->
   <link rel="stylesheet" href="css/global.css"/>
   <link rel="stylesheet" href="css/reports.css"/>
-
-  <!-- Core scripts (matrix rain, nav toggle) -->
-  <script src="js/main.js" defer></script>
-  <!-- Carousel logic -->
-  <script src="js/reports.js" defer></script>
+  <script src="js/main.js" defer></script>      <!-- nav toggle, matrix rain -->
+  <script src="js/reports.js" defer></script>   <!-- new list logic -->
 </head>
 <body class="reports-page">
   <nav class="navbar">
     <div class="logo"><img src="assets/logo.png" alt="ACP Logo"/></div>
-    <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <button class="hamburger" id="menu-toggle">☰</button>
     <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="tools.html">Tools</a></li>
@@ -31,25 +27,9 @@
   <canvas id="matrix-canvas"></canvas>
 
   <main>
-    <section class="reports-carousel">
-      <h1 class="page-title glitch" data-text="Vulnerability Reports">
-        Vulnerability Reports
-      </h1>
-      <p class="subtitle">Swipe or click through your unlocked write-ups.</p>
-
-      <div class="carousel-wrapper">
-        <button class="carousel-nav prev" aria-label="Previous">‹</button>
-        <div class="carousel-container">
-          <div class="carousel-track" id="carousel-track">
-            <!-- slides will be injected here -->
-          </div>
-        </div>
-        <button class="carousel-nav next" aria-label="Next">›</button>
-      </div>
-
-      <!-- Detail pane (injected via JS) -->
-      <div id="detail-container"></div>
-    </section>
+    <h1 class="page-title glitch" data-text="Vulnerability Reports">Vulnerability Reports</h1>
+    <p class="subtitle">Select a write-up to view details below.</p>
+    <div id="reports-list"><!-- JS will populate --></div>
   </main>
 </body>
 </html>
