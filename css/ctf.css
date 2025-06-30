@@ -1,10 +1,96 @@
-.reports-grid,
-.labs-grid,
+/* css/ctf.css */
+/* Page Title */
+.page-title {
+  font-family: 'Orbitron', monospace;
+  text-align: center;
+  color: var(--accent-neon);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 2rem 0 0.5rem;
+}
+/* Grid container */
 .ctf-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 1.5rem;
   padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+/* Card base & reveal animation */
+.ctf-card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--accent-neon);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+.ctf-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ctf-card:hover {
+  box-shadow: 0 0 15px var(--accent-neon);
 }
 
-/* Reports- or Labs- or CTF- specific overrides can go here */
+/* Card header */
+.ctf-card h3 {
+  font-family: 'Orbitron', monospace;
+  margin: 1rem;
+  color: var(--accent-neon);
+}
+.ctf-summary {
+  margin: 0 1rem 1rem;
+  color: var(--text-main);
+}
+.ctf-tags {
+  margin: 0 1rem 1rem;
+}
+.ctf-tags .tag {
+  display: inline-block;
+  background: var(--accent-blue);
+  color: #111;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+/* Action button */
+.ctf-card .btn {
+  margin: 1rem;
+  text-align: center;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  color: var(--text-main);
+}
+.modal-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none; border: none;
+  font-size: 1.2rem; color: var(--accent-neon);
+  cursor: pointer;
+}

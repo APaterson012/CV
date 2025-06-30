@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Buffer Overflow Basics",
+    "summary": "Exploit a simple stack-based buffer overflow to get shell access.",
+    "tags": ["pwn", "buffer-overflow", "linux"],
+    "url": "https://ctf.example.com/buffer-overflow-basics"
+  },
+  {
+    "title": "SQLi Playground",
+    "summary": "Bypass login via blind SQL injection and extract the admin password.",
+    "tags": ["web", "sql-injection", "authentication"],
+    "url": "https://ctf.example.com/sqli-playground"
+  },
+  {
+    "title": "XSS Reflected Fun",
+    "summary": "Find a reflected XSS in the search feature and steal the flag.",
+    "tags": ["web", "xss", "javascript"],
+    "url": "https://ctf.example.com/xss-reflected"
+  },
+  {
+    "title": "Crypto-50: RSA OTP",
+    "summary": "Recover a small RSA key encrypted with a one-time pad and decrypt the message.",
+    "tags": ["crypto", "rsa", "otp"],
+    "url": "https://ctf.example.com/crypto-50-rsa-otp"
+  },
+  {
+    "title": "Reversing: Obfuscated ELF",
+    "summary": "Reverse-engineer an ELF binary to recover the hidden passphrase.",
+    "tags": ["reverse", "elf", "assembly"],
+    "url": "https://ctf.example.com/reverse-obfuscated-elf"
+  },
+  {
+    "title": "Forensics: Memory Dump",
+    "summary": "Analyze a memory dump to locate the injected shellcode and retrieve the flag.",
+    "tags": ["forensics", "memory", "shellcode"],
+    "url": "https://ctf.example.com/forensics-memory-dump"
+  },
+  {
+    "title": "Stego: LSB Secrets",
+    "summary": "Extract hidden data from an image using LSB steganography techniques.",
+    "tags": ["stego", "lsb", "image"],
+    "url": "https://ctf.example.com/stego-lsb-secrets"
+  },
+  {
+    "title": "Networking: MITM Attack",
+    "summary": "Perform a man-in-the-middle on a simulated network and capture the flag packets.",
+    "tags": ["network", "mitm", "pcap"],
+    "url": "https://ctf.example.com/networking-mitm"
+  },
+  {
+    "title": "PPC: Race Condition",
+    "summary": "Exploit a race condition in a setuid root program to escalate privileges.",
+    "tags": ["linux", "race-condition", "priv-esc"],
+    "url": "https://ctf.example.com/ppc-race-condition"
+  },
+  {
+    "title": "OSINT: Social Media Sleuth",
+    "summary": "Gather open-source intelligence to trace the origin of a leaked document.",
+    "tags": ["osint", "recon", "social-engineering"],
+    "url": "https://ctf.example.com/osint-social-media"
+  },
+  {
+    "title": "Hardware: UART Console",
+    "summary": "Connect to a simulated UART console to retrieve the debug flag.",
+    "tags": ["hardware", "uart", "embedded"],
+    "url": "https://ctf.example.com/hardware-uart"
+  },
+  {
+    "title": "Smart Contract: Reentrancy",
+    "summary": "Exploit a reentrancy bug in an Ethereum smart contract to drain its balance.",
+    "tags": ["blockchain", "smart-contract", "solidity"],
+    "url": "https://ctf.example.com/blockchain-reentrancy"
+  }
+]

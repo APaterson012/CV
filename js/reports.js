@@ -1,3 +1,4 @@
+// js/reports.js
 document.addEventListener('DOMContentLoaded', () => {
   const data = [
     { title:'Report Alpha',   pdf:'assets/reports/alpha.pdf',   desc:'Analysis of CVE-2025-1234 overflow exploit and remediation steps.' },
@@ -21,21 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>${r.desc}</p>
       </div>
     `;
+
+    // click to open/close detail pane
     card.addEventListener('click', () => {
       if (openDetailIdx === i) {
-        // clicked same card — close detail & un-highlight
         removeDetail();
         clearHighlights();
         openDetailIdx = null;
       } else {
-        // open new detail
         openDetailIdx = i;
         clearHighlights();
         card.classList.add('active');
         showDetail(i, card);
       }
     });
+
+    // append & then staggered fade-in
     list.appendChild(card);
+    setTimeout(() => card.classList.add('visible'), i * 100);
   });
 
   function clearHighlights() {
@@ -59,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>${r.desc}</p>
       <embed src="${r.pdf}#page=1&zoom=page-width" type="application/pdf">
     `;
-    // closing the detail also clears highlight
+    // close button
     detail.querySelector('.detail-close').addEventListener('click', () => {
       removeDetail();
       clearHighlights();
